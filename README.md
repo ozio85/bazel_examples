@@ -1,2 +1,3 @@
-# bazel_examples
-Some useful Bazel examples
+# Bazel Examples
+
+Example for Bazel cc code coverage
