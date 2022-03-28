@@ -1,0 +1,5 @@
+py_binary(
+    name = "cc_coverage",
+    srcs = ["cc_coverage.py"],
+    visibility = ["//visibility:public"],
+)

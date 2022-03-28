@@ -1,0 +1,20 @@
+load("//Bazel:cc_coverage.bzl", "cc_coverage")
+
+cc_coverage(
+    name = "gtest_coverage",
+    # The library we are testing.
+    deps = ["@com_google_googletest//:gtest"],
+    # Run these tests for this library.
+    tests = [
+        "@com_google_googletest//googletest/test:gtest_all_test",
+        "@com_google_googletest//googletest/test:gtest_test_macro_stack_footprint_test",
+        "@com_google_googletest//googletest/test:googletest-listener-test",
+        "@com_google_googletest//googletest/test:gtest-unittest-api_test",
+        "@com_google_googletest//googletest/test:googletest-param-test-test",
+        "@com_google_googletest//googletest/test:gtest_unittest",
+        "@com_google_googletest//googletest/test:gtest_assert_by_exception_test",
+        "@com_google_googletest//googletest/test:gtest_skip_test",
+        "@com_google_googletest//googletest/test:gtest_skip_in_environment_setup_test",
+        "@com_google_googletest//googletest/test:gtest_no_test_unittest",
+    ],
+)
